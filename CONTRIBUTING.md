@@ -1,4 +1,4 @@
-# Contributing to Skill Factory
+# Contributing to SkillForge
 
 Thank you for your interest in contributing.
 

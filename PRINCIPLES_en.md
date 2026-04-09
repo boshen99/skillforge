@@ -783,4 +783,4 @@ Meta-cognitive thinking:
 
 ---
 
-*This document is provided by skill-factory — giving you meta-cognition, not a rule library*
+*This document is provided by skillforge — giving you meta-cognition, not a rule library*

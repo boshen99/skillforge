@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#f8fafc">SkillForge — Seven Meta-Cognitive Operations</text>
+
+  <!-- Step boxes -->
+  <!-- Step 0 -->
+  <rect x="30" y="80" width="160" height="80" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#818cf8">Step 0</text>
+  <text x="110" y="125" text-anchor="middle" font-size="15" font-weight="600" fill="#e2e8f0">SEARCH</text>
+  <text x="110" y="145" text-anchor="middle" font-size="10" fill="#94a3b8">Learn from existing</text>
+
+  <!-- Arrow 0→1 -->
+  <line x1="190" y1="120" x2="215" y2="120" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 1 -->
+  <rect x="220" y="80" width="160" height="80" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+  <text x="300" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#818cf8">Step 1</text>
+  <text x="300" y="125" text-anchor="middle" font-size="15" font-weight="600" fill="#e2e8f0">SPLIT</text>
+  <text x="300" y="145" text-anchor="middle" font-size="10" fill="#94a3b8">Yin + Yang</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="380" y1="120" x2="405" y2="120" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="410" y="80" width="160" height="80" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+  <text x="490" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#818cf8">Step 2</text>
+  <text x="490" y="125" text-anchor="middle" font-size="15" font-weight="600" fill="#e2e8f0">STACK</text>
+  <text x="490" y="145" text-anchor="middle" font-size="10" fill="#94a3b8">Four Forces</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="570" y1="120" x2="595" y2="120" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="600" y="80" width="160" height="80" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+  <text x="680" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#818cf8">Step 3</text>
+  <text x="680" y="125" text-anchor="middle" font-size="15" font-weight="600" fill="#e2e8f0">EXPAND</text>
+  <text x="680" y="145" text-anchor="middle" font-size="10" fill="#94a3b8">Eight Dimensions</text>
+
+  <!-- Arrow 3→4 (curved down) -->
+  <path d="M 730 160 Q 730 200 680 210" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="600" y="215" width="160" height="80" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="680" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24">Step 4</text>
+  <text x="680" y="260" text-anchor="middle" font-size="15" font-weight="600" fill="#e2e8f0">BALANCE</text>
+  <text x="680" y="280" text-anchor="middle" font-size="10" fill="#94a3b8">Five Elements</text>
+
+  <!-- Arrow 4→5 -->
+  <path d="M 600 255 Q 570 255 555 240" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 5 -->
+  <rect x="410" y="215" width="160" height="80" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="490" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24">Step 5</text>
+  <text x="490" y="260" text-anchor="middle" font-size="15" font-weight="600" fill="#e2e8f0">VERIFY</text>
+  <text x="490" y="280" text-anchor="middle" font-size="10" fill="#94a3b8">Find + fix breaks</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="410" y1="255" x2="385" y2="255" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 6 -->
+  <rect x="220" y="215" width="160" height="80" rx="8" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+  <text x="300" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#4ade80">Step 6</text>
+  <text x="300" y="260" text-anchor="middle" font-size="15" font-weight="600" fill="#e2e8f0">COMPLETE</text>
+  <text x="300" y="280" text-anchor="middle" font-size="10" fill="#94a3b8">Full Skill</text>
+
+  <!-- Arrow complete loop back to top -->
+  <path d="M 220 295 Q 100 295 100 60 Q 100 60 110 60" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <!-- Five Elements diagram (bottom left) -->
+  <rect x="30" y="340" width="400" height="220" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="230" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0">Five Elements — Mutual Generation</text>
+
+  <!-- Generation chain -->
+  <text x="60" y="400" font-size="12" fill="#94a3b8">Wood</text>
+  <text x="60" y="420" font-size="11" font-weight="600" fill="#a5b4fc">Direction</text>
+  <line x1="95" y1="408" x2="120" y2="408" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="125" y="400" font-size="12" fill="#94a3b8">Fire</text>
+  <text x="125" y="420" font-size="11" font-weight="600" fill="#f87171">Judgment</text>
+  <line x1="160" y1="408" x2="185" y2="408" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="190" y="400" font-size="12" fill="#94a3b8">Earth</text>
+  <text x="190" y="420" font-size="11" font-weight="600" fill="#fbbf24">Deposit</text>
+  <line x1="225" y1="408" x2="250" y2="408" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="255" y="400" font-size="12" fill="#94a3b8">Metal</text>
+  <text x="255" y="420" font-size="11" font-weight="600" fill="#94a3b8">Structure</text>
+  <line x1="290" y1="408" x2="315" y2="408" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="320" y="400" font-size="12" fill="#94a3b8">Water</text>
+  <text x="320" y="420" font-size="11" font-weight="600" fill="#67e8f9">Flow</text>
+
+  <!-- Restraint chain -->
+  <text x="60" y="460" font-size="14" font-weight="700" fill="#f87171">Restraint</text>
+  <text x="60" y="480" font-size="10" fill="#94a3b8">Metal → Wood</text>
+  <text x="140" y="480" font-size="10" fill="#94a3b8">Wood → Earth</text>
+  <text x="220" y="480" font-size="10" fill="#94a3b8">Earth → Water</text>
+  <text x="300" y="480" font-size="10" fill="#94a3b8">Water → Fire</text>
+  <text x="380" y="480" font-size="10" fill="#94a3b8">Fire → Metal</text>
+
+  <text x="60" y="498" font-size="9" fill="#64748b">prunes over-scattered</text>
+  <text x="140" y="498" font-size="9" fill="#64748b">innovation breaks stasis</text>
+  <text x="220" y="498" font-size="9" fill="#64748b">accumulation blocks</text>
+  <text x="300" y="498" font-size="9" fill="#64748b">flow balances heat</text>
+  <text x="380" y="498" font-size="9" fill="#64748b">decision reshapes rigid</text>
+
+  <!-- Four Forces (bottom right) -->
+  <rect x="445" y="340" width="425" height="220" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="657" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0">Four Forces — From Yin/Yang to Structure</text>
+
+  <!-- Sun -->
+  <rect x="460" y="385" width="90" height="70" rx="6" fill="#312e81" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="505" y="408" text-anchor="middle" font-size="11" font-weight="700" fill="#a5b4fc">Sun</text>
+  <text x="505" y="424" text-anchor="middle" font-size="10" fill="#c7d2fe">Tools</text>
+  <text x="505" y="442" text-anchor="middle" font-size="9" fill="#818cf8">What家伙?</text>
+
+  <!-- Young Yang -->
+  <rect x="565" y="385" width="90" height="70" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="610" y="408" text-anchor="middle" font-size="11" font-weight="700" fill="#7dd3fc">Young Yang</text>
+  <text x="610" y="424" text-anchor="middle" font-size="10" fill="#bae6fd">Tasks</text>
+  <text x="610" y="442" text-anchor="middle" font-size="9" fill="#38bdf8">What order?</text>
+
+  <!-- Young Yin -->
+  <rect x="670" y="385" width="90" height="70" rx="6" fill="#3b1f1f" stroke="#f87171" stroke-width="1.5"/>
+  <text x="715" y="408" text-anchor="middle" font-size="11" font-weight="700" fill="#fca5a5">Young Yin</text>
+  <text x="715" y="424" text-anchor="middle" font-size="10" fill="#fecaca">Judgment</text>
+  <text x="715" y="442" text-anchor="middle" font-size="9" fill="#f87171">Right/wrong?</text>
+
+  <!-- Dark -->
+  <rect x="775" y="385" width="90" height="70" rx="6" fill="#1f3b1f" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="820" y="408" text-anchor="middle" font-size="11" font-weight="700" fill="#86efac">Dark</text>
+  <text x="820" y="424" text-anchor="middle" font-size="10" fill="#bbf7d0">Gate</text>
+  <text x="820" y="442" text-anchor="middle" font-size="9" fill="#4ade80">Done when?</text>
+
+  <!-- Arrows between forces -->
+  <line x1="550" y1="420" x2="565" y2="420" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="655" y1="420" x2="670" y2="420" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="760" y1="420" x2="775" y2="420" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Eight dimensions labels -->
+  <text x="505" y="480" text-anchor="middle" font-size="10" fill="#94a3b8">Qian (Input) + Kun (Output)</text>
+  <text x="610" y="480" text-anchor="middle" font-size="10" fill="#94a3b8">Zhen (Trigger) + Xun (Flow)</text>
+  <text x="715" y="480" text-anchor="middle" font-size="10" fill="#94a3b8">Kan (Risk) + Li (Standard)</text>
+  <text x="820" y="480" text-anchor="middle" font-size="10" fill="#94a3b8">Gen (Boundary) + Dui (Handshake)</text>
+
+</svg>

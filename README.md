@@ -1,127 +1,156 @@
-# Skill Factory
+# SkillForge
 
-> **From any intent to a complete Skill in seven steps**
+> **Give it any intent. Get back a complete, executable Skill.**
 
-A meta-cognitive framework for deriving AI agent skills from first principles. Not a rule library — you bring the intent, it guides the thinking.
-
-**Seven Meta-Cognitive Operations**: Search → Split → Stack → Expand → Balance → Verify → Complete
+A meta-cognitive framework for deriving AI agent Skills — not a template library, not a rule set. You bring the intent, it guides the thinking. From a one-line idea to a full Skill with tools, task steps, judgment criteria, quality gates, and extension presets.
 
 ---
 
-## What is this?
-
-Skill Factory solves a specific problem: you have an intent ("I want to do X with an AI agent"), and you need a complete, executable Skill — with tools, task steps, judgment criteria, quality gates, and extension presets.
-
-It does not give you a template. It gives you seven operations that force you to think through every dimension of a Skill. The output is always specific to your intent, never generic.
-
-## Quick Start
+## The Seven Steps
 
 ```
-Intent: "I want to monitor competitor prices"
-
-Step 0: Search
-  Search "competitor monitoring Claude Skill" / "AI workflow"
-  → Learn tools, flow, pitfalls, thresholds from existing work
-
-Step 1: Split (Yin/Yang)
-  AI overdoes: modify data, predict trends, over-collect
-  → Yin: no modification, no prediction, no cross-category
-  Yang: periodic collect, record changes, trigger alerts, daily report
-
-Step 2: Stack (Four Forces)
-  Sun (Tools): scraper, diff tool, alert threshold, report generator
-  Young Yang: Step1 trigger → Step2 collect → Step3 diff → Step4 judge → Step5 report
-  Young Yin: collected? (fields >= 5), changed? (any diff), alert? (>10% or new/discontinued)
-  Dark: □ daily record □ diff data □ alert evidence
-
-Step 3: Expand (Eight Dimensions)
-  Qian (Input): competitor model list + last price record
-  Kun (Output): daily_price_report.json + price_alert.md
-  Xun (Flow): → brand-strategy
-  Gen (Boundary): no modification / no prediction / no cross-category / no paid content
-
-Step 4: Balance (Five Elements)
-  Wood (Direction): monitor → support brand strategy ✓
-  Fire (Judgment): 10% threshold, judgment clear ✓
-  Earth (Deposit): daily report + alert ✓
-  Metal (Structure): tool boundaries clear ✓
-  Water (Flow): flow clear, alert → downstream ✓
-
-Step 5: Verify
-  → No floating tools, no vague thresholds, upstream/downstream connected ✓
-  → Extension presets defined: multi-category / API / historical trend ✓
-
-Step 6: Complete ✓
-  Tools: 4  |  Task steps: 5  |  Judgments: 3 quantified  |  Yin rules: 5
+                    ┌─────────────────────────────────┐
+                    │           YOUR INTENT            │
+                    │  "I want to monitor competitor  │
+                    │   prices" / "build a CRM" /   │
+                    │   "automate report generation"  │
+                    └──────────────┬──────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │  0. SEARCH  — What's already out there?  │
+              │  GitHub / HuggingFace / Coze / Dify      │
+              │  Learn: tools · flow · pitfalls · thresholds│
+              └──────────────────┬───────────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │  1. SPLIT  — Yin / Yang                  │
+              │  What must this Skill DO?                  │
+              │  What must it NEVER do?                    │
+              └──────────────────┬───────────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │  2. STACK  — Four Forces                  │
+              │  Sun (Tools) · Young Yang (Tasks)          │
+              │  Young Yin (Judgments) · Dark (Gates)      │
+              └──────────────────┬───────────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │  3. EXPAND  — Eight Dimensions            │
+              │  Qian · Kun · Zhen · Xun                   │
+              │  Kan · Li · Gen · Dui                      │
+              └──────────────────┬───────────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │  4. BALANCE  — Five Elements              │
+              │  Metal → Wood → Fire → Water → Earth       │
+              │  Mutual generation & mutual restraint       │
+              └──────────────────┬───────────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │  5. VERIFY  — Find the breaks            │
+              │  Which force is weak / overdone?          │
+              │  Go back to Step 2 / 3 / 4 and fix it     │
+              └──────────────────┬───────────────────────┘
+                                   ▼
+              ┌──────────────────────────────────────────┐
+              │  6. COMPLETE  — Done when                │
+              │  All forces balanced · Extension presets   │
+              │  defined · Five elements generate &        │
+              │  restrain smoothly                         │
+              └──────────────────────────────────────────┘
 ```
 
-**Done.** That's a complete Skill — not a template, a derivation.
+**Result: a complete, executable Skill** — specific to your intent, not a generic template.
 
 ---
 
-## Seven Operations
+## Quick Example
 
-| Step | Operation | Asks | Outputs |
-|------|-----------|------|---------|
-| 0 | **Search** | What already exists? | Tools / flow / pitfalls / thresholds |
-| 1 | **Split** | What to do vs. not do? | Yin (forbidden) + Yang (do) |
-| 2 | **Stack** | What forces are needed? | Tools / Tasks / Judgment / Gate |
-| 3 | **Expand** | Where does it sit? | Eight Dimensions (Qian/Kun/Zhen/Xun/Kan/Li/Gen/Dui) |
-| 4 | **Balance** | Is the chain intact? | Five Elements (Metal/Wood/Fire/Water/Earth) |
-| 5 | **Verify** | Where does it break? | Fill gaps, back to Step 2/3/4 |
-| 6 | **Complete** | Is it done? | Full Skill ✓ |
+Given the intent: *"I want to monitor competitor prices"*
+
+| Step | Output |
+|------|--------|
+| **Search** | Found: similar skills use scraper + diff + alert threshold |
+| **Split** | Do: periodic collect / record changes / trigger alerts / daily report. Don't: modify data / predict / cross-collect |
+| **Stack** | 4 tools · 5 task steps · 3 quantified judgments · 5 Yin rules |
+| **Expand** | Input: competitor list + last record. Output: `daily_report.json` + `price_alert.md`. Flow: → brand-strategy |
+| **Balance** | Wood (direction) → Fire (10% threshold) → Earth (report + alert) → Metal (boundaries) → Water (flow) — all connected |
+| **Verify** | No floating tools · Thresholds quantified · Extension presets defined |
+| **Complete** | **4 tools · 5 steps · 3 quantified judgments** |
+
+Done in ~15 minutes, not hours.
+
+---
+
+## Five Elements: Not Labels, Forces
+
+The Five Elements are a dynamic reasoning system — not a checklist:
+
+```
+Mutual Generation — where power comes FROM:
+  Wood → Fire    Direction gives judgment its purpose
+  Fire → Earth   Judgment produces outputs
+  Earth → Metal  Outputs shape structure
+  Metal → Water  Structure enables flow
+  Water → Wood   Flow creates new direction
+
+Mutual Restraint — where power constrains:
+  Metal → Wood   Structure prunes over-scattered direction
+  Wood → Earth   Innovation breaks over-stable output
+  Earth → Water  Accumulation blocks flow
+  Water → Fire   Flow balances over-heated judgment
+  Fire → Metal   Decision reshapes rigid structure
+```
+
+**Wrong**: "Check: are tools sufficient? Are tasks ordered?"
+**Right**: "Is direction over-scattered? Is judgment over-rigid? Is output accumulating and blocking flow?"
 
 ---
 
 ## Five Entry Points
 
+Pick the entry that fits your scenario:
+
 | Entry | When to Use |
 |-------|-------------|
-| **Chain Node** | Your Skill is a node in a pipeline (collect/clean/analyze/insight) |
-| **Independent Domain** | Your Skill has its own upstream/downstream, not in a chain |
-| **Strategy Chain** | Your Skill is in L1 (understand) / L2 (change) / L3 (hold) |
-| **Analytics & Insight** | Your Skill has a statistics layer + an insight layer |
-| **5-Minute Quick Start** | Under 10 tools, under 5 steps, independent use |
+| **Chain Node** | Your Skill is a node in a pipeline (collect → clean → analyze → insight) |
+| **Independent Domain** | Your Skill has its own upstream/downstream, not part of any chain |
+| **Strategy Chain** | Your Skill operates in L1 (understand) / L2 (change) / L3 (hold) |
+| **Analytics & Insight** | Your Skill has a statistics layer + an insight layer (what + why) |
+| **5-Minute Quick Start** | Under 10 tools, under 5 steps, independent use, just want it to work |
 
-See [RECIPES.md](RECIPES.md) for the full entry point guides.
-
----
-
-## Five Elements (Metal/Wood/Fire/Water/Earth)
-
-The Five Elements are not labels — they are five forces with generation and restraint relationships:
-
-**Mutual Generation** (where power comes from):
-- Wood → Fire: Direction gives judgment its purpose
-- Fire → Earth: Judgment produces outputs
-- Earth → Metal: Outputs shape structure
-- Metal → Water: Structure enables flow
-- Water → Wood: Flow creates new direction
-
-**Mutual Restraint** (where power constrains):
-- Metal → Wood: Structure prunes over-scattered direction
-- Wood → Earth: Innovation breaks over-stable outputs
-- Earth → Water: Accumulation blocks flow
-- Water → Fire: Flow balances over-heated judgment
-- Fire → Metal: Decision reshapes rigid structure
-
-Use these to ask dynamic questions, not to check boxes. See [PRINCIPLES.md](PRINCIPLES.md) for the full reasoning framework.
+See [RECIPES.md](RECIPES.md) for full entry point guides with specific questions for each step.
 
 ---
 
-## Files
+## Seven Operations at a Glance
+
+| # | Operation | Asks | Output |
+|---|-----------|------|--------|
+| 0 | **Search** | What already exists? | Tool candidates · flow references · pitfalls · thresholds |
+| 1 | **Split** | What to do vs. not do? | Yin (forbidden) + Yang (do) |
+| 2 | **Stack** | What forces are needed? | Tools / Tasks / Judgment / Gate |
+| 3 | **Expand** | Where does it sit? | Eight Dimensions (Qian/Kun/Zhen/Xun/Kan/Li/Gen/Dui) |
+| 4 | **Balance** | Is the chain intact? | Five Elements reasoning (Metal/Wood/Fire/Water/Earth) |
+| 5 | **Verify** | Where does it break? | Go back to Step 2 / 3 / 4, fill the gap |
+| 6 | **Complete** | Is it done? | Full Skill with extension presets |
+
+---
+
+## File Structure
 
 ```
-skill-factory/
-├── README.md              ← You are here (English)
-├── SKILL.md               ← Entry point with seven-step table + quality checklist
-├── PRINCIPLES.md          ← Full meta-cognitive operations (Chinese)
-├── PRINCIPLES_en.md       ← Full meta-cognitive operations (English)
-├── RECIPES.md             ← Five entry points (Chinese)
-├── RECIPES_en.md          ← Five entry points (English)
-├── LICENSE                ← MIT License
-├── CONTRIBUTING.md        ← Contribution guide
-└── .github/               ← Issue templates
+skillforge/
+├── README.md              ← You are here
+├── SKILL.md               ← Entry point (bilingual, 7-step table + quality checklist)
+├── PRINCIPLES.md          ← Full framework in Chinese
+├── PRINCIPLES_en.md       ← Full framework in English
+├── RECIPES.md            ← Five entry points in Chinese
+├── RECIPES_en.md         ← Five entry points in English
+├── LICENSE               ← MIT License
+├── CONTRIBUTING.md       ← Contribution guide
+└── .github/
+    └── ISSUE_TEMPLATE/   ← Bug report + feature request templates
 ```
 
 ---
@@ -130,7 +159,7 @@ skill-factory/
 
 | Skill | Description |
 |-------|-------------|
-| [wechat-publisher](https://github.com/anthropics/claude-code/tree/main/.claude/skills/wechat-publisher) | Auto-generate WeChat articles with AI images |
+| [wechat-publisher](https://github.com/anthropics/claude-code/tree/main/.claude/skills/wechat-publisher) | Auto-generate WeChat articles with AI-generated images |
 
 ---
 
@@ -140,4 +169,4 @@ MIT License — use freely, modify freely, contribute freely.
 
 ---
 
-*This framework gives you meta-cognition, not a rule library.*
+*SkillForge — giving you meta-cognition, not a rule library.*

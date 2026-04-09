@@ -34,4 +34,4 @@ Step: [which step]
 
 ## Environment
 - Language version: [English / Chinese]
-- Skill Factory version: [check VERSION in the file]
+- SkillForge version: [check the file header for version number]

@@ -517,4 +517,4 @@ Is your Skill core "what is it" or "why is it"?
 
 ---
 
-*This document is provided by skill-factory — pick the right entry, fill it and you're done*
+*This document is provided by skillforge — pick the right entry, fill it and you're done*

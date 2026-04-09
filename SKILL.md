@@ -1,9 +1,9 @@
 ---
-name: skill-factory
+name: skillforge
 description: Skill生成工厂 — 从任意意图，通过七步元认知（搜/分/叠/展/衡/验/成），推导出完整 Skill 架构。
 ---
 
-# Skill Factory
+# SkillForge
 
 > **一句话**：给我一个意图，还你一个完整 Skill
 > **七步元认知**：搜→分→叠→展→衡→验→成
@@ -123,4 +123,4 @@ Step 0（第零步）永远先走：
 
 ---
 
-*本文档由 skill-factory 提供 — 给你元认知，不给你规则库*
+*本文档由 skillforge 提供 — 给你元认知，不给你规则库*
