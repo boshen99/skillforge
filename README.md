@@ -1,19 +1,44 @@
 # SkillForge
 
-> **Give it any intent. Get back a complete, executable Skill.**
+> **Turn any intent into a complete, executable AI Skill.**
 
-A meta-cognitive framework for deriving AI agent Skills — not a template library, not a rule set. You bring the intent, it guides the thinking. From a one-line idea to a full Skill with tools, task steps, judgment criteria, quality gates, and extension presets.
+Give SkillForge an idea — *I want to monitor competitor prices* — and it walks you through 7 questions to derive a complete Skill with tools, tasks, judgments, and quality gates.
+
+```yaml
+Input:  One sentence of intent
+Output: A complete, runnable Skill
+Time:   15-30 minutes
+```
 
 ---
 
-## The Seven Steps
+## 30 Seconds: The Problem & The Solution
+
+**The problem** — You have an idea for an AI Skill. You're not sure:
+- Which tools you need
+- What order to run them in
+- Where this Skill sits in your pipeline
+- What it should *never* do
+- How to know it's working
+
+**The solution** — Answer 7 questions. Get a complete Skill with:
+- **3-10 tools** it needs
+- **5-10 ordered task steps** to follow
+- **2-5 quantified judgments** (with thresholds, not vibes)
+- **3-5 quality gates** to know it's done
+- **3+ forbidden actions** so it doesn't go off the rails
+- **3+ extension directions** so it grows when you need
+
+---
+
+## 30 Minutes: The Seven Questions
 
 ```
                     ┌─────────────────────────────────┐
                     │           YOUR INTENT            │
                     │  "I want to monitor competitor  │
-                    │   prices" / "build a CRM" /   │
-                    │   "automate report generation"  │
+                    │   prices" / "triage GitHub       │
+                    │   Issues" / "build a CRM"        │
                     └──────────────┬──────────────────┘
                                    ▼
               ┌──────────────────────────────────────────┐
@@ -24,67 +49,68 @@ A meta-cognitive framework for deriving AI agent Skills — not a template libra
                                    ▼
               ┌──────────────────────────────────────────┐
               │  1. SPLIT  — Yin / Yang                  │
-              │  What must this Skill DO?                  │
-              │  What must it NEVER do?                    │
+              │  (What to DO / What to NEVER do)         │
+              │  Do: periodic collect / record / alert   │
+              │  Don't: modify data / predict / cross-collect│
               └──────────────────┬───────────────────────┘
                                    ▼
               ┌──────────────────────────────────────────┐
               │  2. STACK  — Four Forces                  │
-              │  Sun (Tools) · Young Yang (Tasks)          │
-              │  Young Yin (Judgments) · Dark (Gates)      │
+              │  Sun (Tools) · Young Yang (Tasks)         │
+              │  Young Yin (Judgments) · Dark (Gates)     │
               └──────────────────┬───────────────────────┘
                                    ▼
               ┌──────────────────────────────────────────┐
               │  3. EXPAND  — Eight Dimensions            │
-              │  Qian · Kun · Zhen · Xun                   │
-              │  Kan · Li · Gen · Dui                      │
+              │  Qian (Input) · Kun (Output)              │
+              │  Zhen (Start) · Xun (Next)                │
+              │  Kan (Errors) · Li (Success)              │
+              │  Gen (Boundaries) · Dui (Handoff)         │
               └──────────────────┬───────────────────────┘
                                    ▼
               ┌──────────────────────────────────────────┐
               │  4. BALANCE  — Five Elements              │
-              │  Metal → Wood → Fire → Water → Earth       │
-              │  Mutual generation & mutual restraint       │
+              │  Wood (Direction) → Fire (Judgment)       │
+              │  → Earth (Output) → Metal (Structure)    │
+              │  → Water (Flow)                           │
+              │  Check: chain intact? any weak link?      │
               └──────────────────┬───────────────────────┘
                                    ▼
               ┌──────────────────────────────────────────┐
-              │  5. VERIFY  — Find the breaks            │
-              │  Which force is weak / overdone?          │
+              │  5. VERIFY  — Find the breaks             │
+              │  Over-scattered direction? Over-rigid      │
+              │  judgment? Output blocking flow?          │
               │  Go back to Step 2 / 3 / 4 and fix it     │
               └──────────────────┬───────────────────────┘
                                    ▼
               ┌──────────────────────────────────────────┐
-              │  6. COMPLETE  — Done when                │
-              │  All forces balanced · Extension presets   │
-              │  defined · Five elements generate &        │
-              │  restrain smoothly                         │
+              │  6. COMPLETE  — Done when                 │
+              │  All five forces balanced                 │
+              │  Extension directions defined             │
+              │  No floating tools or orphan tasks        │
               └──────────────────────────────────────────┘
 ```
 
 **Result: a complete, executable Skill** — specific to your intent, not a generic template.
 
+> Don't know what the Chinese terms mean? See [The Terms in Plain English](#the-terms-in-plain-english) below.
+
 ---
 
-## Quick Example
+## Real Examples (Built With This Framework)
 
-Given the intent: *"I want to monitor competitor prices"*
+| Intent | Skill Output | Walkthrough |
+|--------|--------------|-------------|
+| Monitor competitor prices | 4 tools · 5 steps · 3 judgments | See [PRINCIPLES.md](PRINCIPLES.md) § "完整走一遍" |
+| **Auto-triage GitHub Issues** | 4 tools · 6 steps · 5 judgments · 8 forbidden | [examples/01-github-issue-auto-triage.md](examples/01-github-issue-auto-triage.md) |
 
-| Step | Output |
-|------|--------|
-| **Search** | Found: similar skills use scraper + diff + alert threshold |
-| **Split** | Do: periodic collect / record changes / trigger alerts / daily report. Don't: modify data / predict / cross-collect |
-| **Stack** | 4 tools · 5 task steps · 3 quantified judgments · 5 Yin rules |
-| **Expand** | Input: competitor list + last record. Output: `daily_report.json` + `price_alert.md`. Flow: → brand-strategy |
-| **Balance** | Wood (direction) → Fire (10% threshold) → Earth (report + alert) → Metal (boundaries) → Water (flow) — all connected |
-| **Verify** | No floating tools · Thresholds quantified · Extension presets defined |
-| **Complete** | **4 tools · 5 steps · 3 quantified judgments** |
-
-Done in ~15 minutes, not hours.
+**Each example walks the full 7-step process** — search, split, stack, expand, balance, verify, complete — and ends with a copy-paste-ready `SKILL.md`.
 
 ---
 
 ## Five Elements: Not Labels, Forces
 
-The Five Elements are a dynamic reasoning system — not a checklist:
+The Five Elements are a **dynamic reasoning system** — not a checklist. They ask: *what forces are at play, and which one is weak or overdone?*
 
 ```
 Mutual Generation — where power comes FROM:
@@ -102,8 +128,52 @@ Mutual Restraint — where power constrains:
   Fire → Metal   Decision reshapes rigid structure
 ```
 
-**Wrong**: "Check: are tools sufficient? Are tasks ordered?"
-**Right**: "Is direction over-scattered? Is judgment over-rigid? Is output accumulating and blocking flow?"
+**Wrong way**: *"Check: are tools sufficient? Are tasks ordered?"*
+**Right way**: *"Is direction over-scattered? Is judgment over-rigid? Is output accumulating and blocking flow?"*
+
+---
+
+## The Terms in Plain English
+
+SkillForge borrows imagery from Chinese cosmology — 八八八 (bagua) and 五行 (wuxing). These are not mystical; they're compact labels for reasoning patterns. Here's what they actually mean:
+
+| Chinese | Literal | Plain English |
+|---------|---------|---------------|
+| **太极** (Taiji) | Supreme ultimate | The seed intent you start with |
+| **阴阳** (Yin-Yang) | Dark-Light | **What to do / What never to do** |
+| **四象** (Sixiang) | Four Images | **Tools / Tasks / Judgments / Quality gates** |
+| **乾 Qian** (Heaven) | Creative | **Input** — what data the Skill receives |
+| **坤 Kun** (Earth) | Receptive | **Output** — what files/messages it produces |
+| **震 Zhen** (Thunder) | Arousing | **Starting task** — the first step |
+| **巽 Xun** (Wind) | Gentle | **Flow** — where output goes next |
+| **坎 Kan** (Water) | Abyss | **Errors** — what to do when things break |
+| **离 Li** (Fire) | Clinging | **Success criteria** — how to know it's done |
+| **艮 Gen** (Mountain) | Stillness | **Boundaries** — what it must never do |
+| **兑 Dui** (Lake) | Joyous | **Handoff** — protocol for the next Skill |
+| **木 Wood** | — | **Direction** — where this Skill is heading |
+| **火 Fire** | — | **Judgment** — the decision-making power |
+| **土 Earth** | — | **Output** — what gets produced |
+| **金 Metal** | — | **Structure** — the tools and boundaries |
+| **水 Water** | — | **Flow** — how Skills connect |
+
+If you only remember two things:
+
+> **Eight Dimensions** = where the Skill lives in the world (input/output/flow/errors/etc.)
+> **Five Elements** = the forces at play inside the Skill (direction/judgment/output/structure/flow)
+
+---
+
+## Seven Operations at a Glance
+
+| # | Operation | Asks | Output |
+|---|-----------|------|--------|
+| 0 | **Search** | What already exists? | Tool candidates · flow references · pitfalls · thresholds |
+| 1 | **Split** | What to do vs. not do? | Yin (forbidden) + Yang (do) |
+| 2 | **Stack** | What forces are needed? | Tools / Tasks / Judgment / Gate |
+| 3 | **Expand** | Where does it sit? | Eight Dimensions (Input/Output/Flow/Errors/...) |
+| 4 | **Balance** | Is the chain intact? | Five Elements reasoning (Direction/Judgment/Output/Structure/Flow) |
+| 5 | **Verify** | Where does it break? | Go back to Step 2 / 3 / 4, fill the gap |
+| 6 | **Complete** | Is it done? | Full Skill with extension presets |
 
 ---
 
@@ -123,49 +193,40 @@ See [RECIPES.md](RECIPES.md) for full entry point guides with specific questions
 
 ---
 
-## Seven Operations at a Glance
-
-| # | Operation | Asks | Output |
-|---|-----------|------|--------|
-| 0 | **Search** | What already exists? | Tool candidates · flow references · pitfalls · thresholds |
-| 1 | **Split** | What to do vs. not do? | Yin (forbidden) + Yang (do) |
-| 2 | **Stack** | What forces are needed? | Tools / Tasks / Judgment / Gate |
-| 3 | **Expand** | Where does it sit? | Eight Dimensions (Qian/Kun/Zhen/Xun/Kan/Li/Gen/Dui) |
-| 4 | **Balance** | Is the chain intact? | Five Elements reasoning (Metal/Wood/Fire/Water/Earth) |
-| 5 | **Verify** | Where does it break? | Go back to Step 2 / 3 / 4, fill the gap |
-| 6 | **Complete** | Is it done? | Full Skill with extension presets |
-
----
-
 ## File Structure
 
 ```
 skillforge/
 ├── README.md              ← You are here
-├── SKILL.md               ← Entry point (bilingual, 7-step table + quality checklist)
-├── PRINCIPLES.md          ← Full framework in Chinese
-├── PRINCIPLES_en.md       ← Full framework in English
-├── RECIPES.md            ← Five entry points in Chinese
-├── RECIPES_en.md         ← Five entry points in English
-├── LICENSE               ← MIT License
-├── CONTRIBUTING.md       ← Contribution guide
+├── SKILL.md               ← Entry point (7-step table + quality checklist)
+├── PRINCIPLES.md          ← Full framework (Chinese)
+├── PRINCIPLES_en.md       ← Full framework (English)
+├── RECIPES.md             ← Five entry points (Chinese)
+├── RECIPES_en.md          ← Five entry points (English)
+├── examples/              ← End-to-end walkthroughs
+│   └── 01-github-issue-auto-triage.md
+├── diagram.svg            ← Visual seven-step flow + five forces
+├── LICENSE                ← MIT
+├── CONTRIBUTING.md        ← Contribution guide
 └── .github/
-    └── ISSUE_TEMPLATE/   ← Bug report + feature request templates
+    └── ISSUE_TEMPLATE/    ← Bug report + feature request templates
 ```
 
 ---
 
-## Example Skills Built with This Framework
+## Who Built Skills With This
 
 | Skill | Description |
 |-------|-------------|
 | [wechat-publisher](https://github.com/anthropics/claude-code/tree/main/.claude/skills/wechat-publisher) | Auto-generate WeChat articles with AI-generated images |
 
+*Have a Skill you built with this framework? Open a PR to add it here.*
+
 ---
 
 ## License
 
-MIT License — use freely, modify freely, contribute freely.
+MIT — use freely, modify freely, contribute freely.
 
 ---
 
